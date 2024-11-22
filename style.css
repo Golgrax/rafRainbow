@@ -1,4 +1,4 @@
-/* Set up full page to show the background images */
+/* Styles for the page */
 body {
   margin: 0;
   padding: 0;
@@ -10,21 +10,34 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  cursor: pointer; /* Makes it clear it's clickable */
+  flex-direction: column;
+  text-align: center;
 }
 
+/* Styling for the Goku image */
+#goku-image {
+  cursor: pointer;
+  max-width: 100%;
+  height: auto;
+  border: 2px solid white;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* Button Styling */
 button {
   cursor: pointer;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #ffcc00;
   border: none;
-  background-color: transparent;
-  padding: 0;
-  width: 300px; /* You can set any width you prefer */
-  height: 400px; /* You can set any height you prefer */
-  background-image: url('/goku normal (1).png');
-  background-size: cover;
-  background-position: center;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  color: white;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #ff9900;
 }
 
 button:focus {
