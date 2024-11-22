@@ -31,28 +31,23 @@ header {
     overflow: hidden;
     clip: rect(0, auto, auto, 0);
     animation: fadeInUp 1.5s ease;
-    background-size: cover;
-    background-position: center;
+    background-size: 50% 100%; /* Make the image take only half the width */
+    background-position: left center; /* Default to align left */
+}
+
+.section:nth-child(even) {
+    background-position: right center; /* Alternate: Align right */
 }
 
 .section .fixed {
     overflow: hidden;
     position: fixed;
     top: 50%;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
     line-height: 1.6;
     padding: 10px;
-}
-
-.section .fixed.left {
-    left: 10%; /* Content aligned to the left */
-    text-align: left;
-}
-
-.section .fixed.right {
-    right: 10%; /* Content aligned to the right */
-    text-align: right;
 }
 
 .section .white {
