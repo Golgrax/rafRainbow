@@ -60,9 +60,9 @@
     document.getElementById("revealButton").addEventListener("click", () => {
         const bgImages = document.querySelectorAll('.bg-image');
         bgImages.forEach((bgImage, index) => {
-            bgImage.style.opacity = '1'; 
-            bgImage.style.left = index % 2 === 0 ? '5%' : 'auto'; 
-            bgImage.style.right = index % 2 !== 0 ? '5%' : 'auto'; 
+            bgImage.style.opacity = '1'; // Make images visible
+            bgImage.style.left = index % 2 === 0 ? '5%' : 'auto'; // Left for even sections
+            bgImage.style.right = index % 2 !== 0 ? '5%' : 'auto'; // Right for odd sections
         });
     });
 </script>
