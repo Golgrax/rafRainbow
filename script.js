@@ -1,16 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const gokuImage = document.getElementById('goku-image');
+  const gokuButton = document.getElementById('goku-button');
   const body = document.body;
 
-  gokuImage.addEventListener('click', () => {
-    // Extract the filename from the src URL to make comparison easier
-    const currentSrc = gokuImage.src.split('/').pop();
+  gokuButton.addEventListener('click', () => {
+    const currentImage = gokuButton.style.backgroundImage;
 
-    if (currentSrc === 'goku normal (1).png') {
-      gokuImage.src = '/goku god (1).png';
+    if (currentImage.includes('goku normal (1).png')) {
+      gokuButton.style.backgroundImage = "url('/goku god (1).png')";
       body.style.backgroundImage = "url('/aura.gif')";
     } else {
-      gokuImage.src = '/goku normal (1).png';
+      gokuButton.style.backgroundImage = "url('/goku normal (1).png')";
       body.style.backgroundImage = '';
     }
   });
