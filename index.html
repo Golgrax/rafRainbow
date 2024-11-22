@@ -44,6 +44,8 @@
             <p>
                 tap the button to make the images visible
             </p>
+            <button id="show-images">Show Images</button>
+
         </div>
     </div>
 
@@ -93,13 +95,13 @@
 
 
     <script>
-    // JavaScript to handle button click
-    document.getElementById('show-images').addEventListener('click', () => {
-        const images = document.querySelectorAll('.image');
-        images.forEach(image => {
-            image.style.opacity = '1';
-        });
+document.getElementById('show-images').addEventListener('click', () => {
+    const images = document.querySelectorAll('.image');
+    images.forEach(image => {
+        image.classList.add('visible');
     });
+});
+
 </script>
 
 
