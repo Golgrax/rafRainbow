@@ -43,7 +43,7 @@
 <div class="section">
     <div class="fixed left">
         <p>press this button</p>
-        <button onclick="showImages()">Click Me</button>
+        <button onclick="alert('Button Pressed!')">Click Me</button>
     </div>
 </div>
 <div class="section">
@@ -57,18 +57,7 @@
     </div>
 </div>
 <div class="section">
-    <div class="fixed right">
-        <p class="white">Thanks for Visiting!</p>
-    </div>
+    <p class="fixed right white">Thanks for Visiting!</p>
 </div>
-
-<script>
-    function showImages() {
-        const sections = document.querySelectorAll('.section');
-        sections.forEach(section => {
-            section.classList.add('show-image');
-        });
-    }
-</script>
 </body>
 </html>
