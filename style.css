@@ -11,10 +11,20 @@ body {
   background-position: center;
 }
 
-img {
+button {
   cursor: pointer;
-  max-width: 100%;
-  height: auto;
-  border: 2px solid white;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  width: 300px; /* adjust the width to fit your image */
+  height: 400px; /* adjust the height to fit your image */
+  background-image: url('/goku normal (1).png');
+  background-size: cover;
+  background-position: center;
   border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+button:focus {
+  outline: none;
 }
