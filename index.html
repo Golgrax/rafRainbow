@@ -9,62 +9,66 @@
 <body>
 <div class="section">
     <div class="oop"></div>
-    <div class="fixed">
-        <h1 class="large">rafaels portfolio</h1>
+    <div class="fixed left">
+        <h1 class="large">rafael's portfolio</h1>
         <p>scroll to see more</p>
     </div>
 </div>
 <div class="section">
-    <div class="fixed">
+    <div class="fixed right">
         <h1>Hello I'm Rafael Luchavez</h1>
         <p>BSIT</p>
-        <div class="bg-image"></div>
     </div>
 </div>
 <div class="section">
-    <div class="p fixed">I live in 4E</div>
-    <div class="bg-image"></div>
+    <div class="fixed left">
+        <p>I live in 4E</p>
+    </div>
 </div>
 <div class="section">
-    <div class="p fixed">I'm male</div>
-    <div class="bg-image"></div>
+    <div class="fixed right">
+        <p>I'm male</p>
+    </div>
 </div>
 <div class="section">
-    <div class="p fixed">I love playing games</div>
-    <div class="bg-image"></div>
+    <div class="fixed left">
+        <p>I love playing games</p>
+    </div>
 </div>
 <div class="section">
-    <div class="p fixed">I'm in a relationship</div>
-    <div class="bg-image"></div>
+    <div class="fixed right">
+        <p>I'm in a relationship</p>
+    </div>
 </div>
 <div class="section">
-    <div class="p fixed">
+    <div class="fixed left">
         <p>press this button</p>
-        <button id="revealButton">Click Me</button>
+        <button onclick="showImages()">Click Me</button>
     </div>
 </div>
 <div class="section">
-    <div class="p fixed">I'm in second year</div>
-    <div class="bg-image"></div>
+    <div class="fixed right">
+        <p>I'm in second year</p>
+    </div>
 </div>
 <div class="section">
-    <div class="p fixed">I'm 20 years old</div>
-    <div class="bg-image"></div>
+    <div class="fixed left">
+        <p>I'm 20 years old</p>
+    </div>
 </div>
 <div class="section">
-    <p class="fixed white">Thanks for Visiting!</p>
-    <div class="bg-image"></div>
+    <div class="fixed right">
+        <p class="white">Thanks for Visiting!</p>
+    </div>
 </div>
-
 <script>
-    document.getElementById("revealButton").addEventListener("click", () => {
-        const bgImages = document.querySelectorAll('.bg-image');
-        bgImages.forEach((bgImage, index) => {
-            bgImage.style.opacity = '1'; // Make images visible
-            bgImage.style.left = index % 2 === 0 ? '5%' : 'auto'; // Left for even sections
-            bgImage.style.right = index % 2 !== 0 ? '5%' : 'auto'; // Right for odd sections
+    function showImages() {
+        const sections = document.querySelectorAll('.section');
+        sections.forEach(section => {
+            section.style.opacity = '1';
+            section.style.transition = 'opacity 1.5s ease';
         });
-    });
+    }
 </script>
 </body>
 </html>
