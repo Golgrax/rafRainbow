@@ -1,3 +1,4 @@
+/* Set up full page to show the background images */
 body {
   margin: 0;
   padding: 0;
@@ -9,6 +10,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  cursor: pointer; /* Makes it clear it's clickable */
 }
 
 button {
@@ -16,8 +18,8 @@ button {
   border: none;
   background-color: transparent;
   padding: 0;
-  width: 300px; /* adjust the width to fit your image */
-  height: 400px; /* adjust the height to fit your image */
+  width: 300px; /* You can set any width you prefer */
+  height: 400px; /* You can set any height you prefer */
   background-image: url('/goku normal (1).png');
   background-size: cover;
   background-position: center;
