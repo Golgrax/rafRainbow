@@ -18,34 +18,53 @@
     <div class="fixed">
         <h1>Hello I'm Rafael Luchavez</h1>
         <p>BSIT</p>
+        <div class="bg-image"></div>
     </div>
 </div>
 <div class="section">
     <div class="p fixed">I live in 4E</div>
+    <div class="bg-image"></div>
 </div>
 <div class="section">
     <div class="p fixed">I'm male</div>
+    <div class="bg-image"></div>
 </div>
 <div class="section">
     <div class="p fixed">I love playing games</div>
+    <div class="bg-image"></div>
 </div>
 <div class="section">
     <div class="p fixed">I'm in a relationship</div>
+    <div class="bg-image"></div>
 </div>
 <div class="section">
     <div class="p fixed">
         <p>press this button</p>
-        <button onclick="alert('Button Pressed!')">Click Me</button>
+        <button id="revealButton">Click Me</button>
     </div>
 </div>
 <div class="section">
     <div class="p fixed">I'm in second year</div>
+    <div class="bg-image"></div>
 </div>
 <div class="section">
     <div class="p fixed">I'm 20 years old</div>
+    <div class="bg-image"></div>
 </div>
 <div class="section">
     <p class="fixed white">Thanks for Visiting!</p>
+    <div class="bg-image"></div>
 </div>
+
+<script>
+    document.getElementById("revealButton").addEventListener("click", () => {
+        const bgImages = document.querySelectorAll('.bg-image');
+        bgImages.forEach((bgImage, index) => {
+            bgImage.style.opacity = '1'; 
+            bgImage.style.left = index % 2 === 0 ? '5%' : 'auto'; 
+            bgImage.style.right = index % 2 !== 0 ? '5%' : 'auto'; 
+        });
+    });
+</script>
 </body>
 </html>
