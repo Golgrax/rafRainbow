@@ -48,78 +48,78 @@ header {
     color: #fff;
 }
 
-/* Unique background colors for each section */
+
 .section:nth-child(1) {
-    background-color: #e6e6e6; /* Light gray */
+    background-color: #e6e6e6; 
     color: #000;
     top: 0;
     z-index: 1;
 }
 
 .section:nth-child(2) {
-    background-color: #ff6f61; /* Coral red */
+    background-color: #ff6f61; 
     color: #fff;
     top: 100vh;
     z-index: 2;
 }
 
 .section:nth-child(3) {
-    background-color: #6b8e23; /* Olive green */
+    background-color: #6b8e23; 
     color: #fff;
     top: 200vh;
     z-index: 3;
 }
 
 .section:nth-child(4) {
-    background-color: #4682b4; /* Steel blue */
+    background-color: #4682b4; 
     color: #fff;
     top: 300vh;
     z-index: 4;
 }
 
 .section:nth-child(5) {
-    background-color: #ffd700; /* Gold */
+    background-color: #ffd700; 
     color: #000;
     top: 400vh;
     z-index: 5;
 }
 
 .section:nth-child(6) {
-    background-color: #9932cc; /* Dark orchid */
+    background-color: #9932cc; 
     color: #fff;
     top: 500vh;
     z-index: 6;
 }
 
 .section:nth-child(7) {
-    background-color: #ff4500; /* Orange red */
+    background-color: #ff4500; 
     color: #fff;
     top: 600vh;
     z-index: 7;
 }
 
 .section:nth-child(8) {
-    background-color: #20b2aa; /* Light sea green */
+    background-color: #20b2aa;
     color: #fff;
     top: 700vh;
     z-index: 8;
 }
 
 .section:nth-child(9) {
-    background-color: #ee82ee; /* Violet */
+    background-color: #ee82ee; 
     color: #000;
     top: 800vh;
     z-index: 9;
 }
 
 .section:nth-child(10) {
-    background-color: #1a1a1a; /* Dark gray */
+    background-color: #1a1a1a; 
     color: #fff;
     top: 900vh;
     z-index: 10;
 }
 
-/* Gradient OOP bar */
+
 .oop {
     position: relative;
     z-index: auto;
@@ -161,7 +161,7 @@ header {
     }
 }
 
-/* Add animations to the fixed content for more dynamism */
+
 .section:nth-child(1) .fixed {
     animation: slideInFromLeft 1.5s ease;
 }
@@ -204,38 +204,50 @@ button:hover {
 
 
 
-/* Images are initially transparent */
 .image {
     opacity: 0;
     transition: opacity 0.5s ease, transform 0.5s ease;
-    max-width: 90%; /* Responsive scaling */
+    max-width: 90%; 
     display: block;
 }
 
-/* Alternate alignment for images */
+
 .section:nth-child(odd) .image {
     float: left;
     margin-left: 10px;
-    transform: translateX(-20px); /* Slight offset for fade-in effect */
+    transform: translateX(-20px); 
 }
 
 .section:nth-child(even) .image {
     float: right;
     margin-right: 10px;
-    transform: translateX(20px); /* Slight offset for fade-in effect */
+    transform: translateX(20px); 
 }
 
-/* Reset alignment on small screens */
+
 @media (max-width: 768px) {
     .image {
         float: none;
         margin: 0 auto;
-        transform: translateX(0); /* Center images */
+        transform: translateX(0); 
     }
 }
 
-/* Fade-in effect when visible */
 .image.visible {
     opacity: 1;
-    transform: translateX(0); /* Neutralize offset */
+    transform: translateX(0); 
+}
+
+.fixed {
+    text-align: center; 
+}
+
+.fixed p {
+    margin-bottom: 20px; 
+}
+
+.fixed button {
+    margin-top: 10px; 
+    position: relative; 
+    z-index: 1; 
 }
