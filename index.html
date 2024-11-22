@@ -3,33 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Image Toggle</title>
+  <title>Goku Button</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <img id="goku-image" src="goku normal (1).png" alt="Goku Normal">
-  <link rel="stylesheet" href="/styles.css">
-<script src="/script.js"></script>
+  <!-- Button that acts as an image -->
+  <button id="goku-button"></button>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-  const gokuImage = document.getElementById('goku-image');
-  const body = document.body;
-
-  gokuImage.addEventListener('click', () => {
-    // Extract the filename from the src URL to make comparison easier
-    const currentSrc = gokuImage.src.split('/').pop();
-
-    if (currentSrc === 'goku normal (1).png') {
-      gokuImage.src = '/goku god (1).png';
-      body.style.backgroundImage = "url('/aura.gif')";
-    } else {
-      gokuImage.src = '/goku normal (1).png';
-      body.style.backgroundImage = '';
-    }
-  });
-});
-
-
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
