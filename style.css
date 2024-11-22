@@ -201,3 +201,41 @@ button:hover {
     background: #000;
     color: #fff;
 }
+
+
+
+/* Images are initially transparent */
+.image {
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    max-width: 90%; /* Responsive scaling */
+    display: block;
+}
+
+/* Alternate alignment for images */
+.section:nth-child(odd) .image {
+    float: left;
+    margin-left: 10px;
+    transform: translateX(-20px); /* Slight offset for fade-in effect */
+}
+
+.section:nth-child(even) .image {
+    float: right;
+    margin-right: 10px;
+    transform: translateX(20px); /* Slight offset for fade-in effect */
+}
+
+/* Reset alignment on small screens */
+@media (max-width: 768px) {
+    .image {
+        float: none;
+        margin: 0 auto;
+        transform: translateX(0); /* Center images */
+    }
+}
+
+/* Fade-in effect when visible */
+.image.visible {
+    opacity: 1;
+    transform: translateX(0); /* Neutralize offset */
+}
